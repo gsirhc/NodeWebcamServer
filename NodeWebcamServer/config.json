@@ -1,0 +1,23 @@
+﻿{
+	"UseTheseSettings": false,
+    "ServerPort":  8080,
+    "CaptureCommand": "fswebcam -r {height}x{width} {fileName}",
+    "CaptureToFilePath": "webcam.jpg",
+	"ImageHeight": 1024,
+    "ImageWidth": 768,
+    "CaptureIntervalSeconds": 60,
+    "CaptureTimeWindowStart": "",
+    "CaptureTimeWindowEnd": "",
+    "Latitude": "",
+    "Longitude": "",    
+    "Title": "Welcome to the WebCam",
+    "AllowRefreshNow": "true",
+    "FtpHost": "",
+    "FtpPort": 21,
+    "FtpUser": "anonymous",
+    "FtpPassword": "anonymous@",
+    "FtpUploadPath": "/",
+    "FtpIntervalSeconds": 600,
+    "FtpTimeWindowStart": "",
+    "FtpTimeWindowEnd": ""
+}

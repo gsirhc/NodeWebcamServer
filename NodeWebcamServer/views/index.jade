@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  img(src='/image')
+  <br/><br/>
+  a(href='/image') Image Only
+  if settings.AllowRefreshNow     
+     | &nbsp;|&nbsp;
+     a(href="/refresh") Refresh
+  if sunrisesunset.show
+     <br/><br/>
+     table
+        tr
+           td Current:
+           td #{sunrisesunset.current}
+        tr
+           td Sunrise:
+           td #{sunrisesunset.sunrise}
+        tr
+           td Sunset:
+           td #{sunrisesunset.sunset}
