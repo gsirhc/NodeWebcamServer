@@ -22,18 +22,16 @@ Runs on any platform supported by Nodejs.
 8. Open a browser to http://localhost:8080
 
 ## Configuration
-To configure NWS, open app.js in your favorite editor and edit the "Webcam Server Settings:
+To configure NWS, open app.js in your favorite editor and edit the "Webcam Server Settings":
 
-**CaptureCommand**: The command line program to execute that will capture an image from the camera to a file. By default, fswebcam is supported however any commandline program can be used here.  
-** Just make sure it is referenced in the system path. *  
-Arguments (optional):
-    - {height}: replaced with ImageHeight
-    - {width}: replaced with ImageWidth
-    - {fileName}: replaced with CaptureToFileName
+**CaptureCommand**: 
+The command line program to execute that will capture an image from the camera to a file. By default, fswebcam is supported however any commandline program can be used here.  * Just make sure it is referenced in the system path.   
+> Arguments (optional):,
+* {height}: replaced with ImageHeight,
+* {width}: replaced with ImageWidth,
+* {fileName}: replaced with CaptureToFileName,
     
 **CaptureToFilePath**:
-
-
 
 ImageHeight            |
 CaptureIntervalSeconds |
