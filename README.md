@@ -1,28 +1,44 @@
-NodeWebcamServer
-================
-
+Node Webcam Server (NWS)
+========================
 A simple nodejs based webcam server.  
 
 NWS will periodically pull an image from any USB webcam and save it to a local file then serve it up
 via a simple Nodejs web server.  NWS can also be configured to FTP the image to any remote site.
 
-Runs on any platform supported by Nodejs.
+Runs on any platform supported by [Nodejs](http://nodejs.org/).
+
+## Features
+* Very configurable.
+* Web based.
+* Capture time windows.  You can configure NWS to save images during a specific time window.
+* Sunrise/Sunset aware.  Given latitude/longituge NWS can be configured to only pull images during daylight hours.
+* FTP.  NWS can be setup to FTP the image to a server.  The FTP interval can be configured separately from the capture interval.
+
+## Requirements
+* [Nodejs](http://nodejs.org/)
+* Command line webcam capture program such as [fswebcam](http://www.firestorm.cx/fswebcam/)
 
 ## Quick Start (Linux)
 
-1. Install [Node](http://nodejs.org/).
+1. Install [Nodejs](http://nodejs.org/).
 2. Install [fswebcam](http://www.firestorm.cx/fswebcam/) on your target distro.
 3. Ensure your webcam is plugged into a USB port.
-4. Download the entire NWS directory structure from Github.
-5. Navigate to the root directory and run:
-'''bash npm install'''
+4. Download the entire NodeWebcamServer directory structure from Github.
+5. Navigate to the root application directory (will have a file named app.js in it) and run:
+'''
+npm install
+'''
 6. Give the directory structure Read/Execute permissions
-7. Run the following command from the NWS root directory:
-'''bash node app.js'''
-8. Open a browser to http://localhost:8080
+7. Give the /public directory Read/Write permissions
+8. Run the following command from the NWS root directory:
+'''
+node app.js
+'''
+9. Open a browser to http://localhost:8080
+10. Configure NWS to start automatically using /etc/init.d or upstart script
 
 ## Configuration
-To configure NWS, open app.js in your favorite editor and edit the "Webcam Server Settings":
+To configure NWS, open app.js in your favorite editor and modify the "Webcam Server Settings":
 
 **CaptureCommand**: 
 The command line program to execute that will capture an image from the camera to a file. By default, fswebcam is supported however any commandline program can be used here.  * Just make sure it is referenced in the system path.   
@@ -98,25 +114,43 @@ interval is the same as the capture interval, both will be executed at the same 
 Time window during a 24 hour period to FTP the image. Leave blank to use same resitrction as CaptureTimeWindow.  See CaptureTimeWindow notes for format.
 
 
-## NWS and Raspberry Pi (with Raspian)
-1. Install [Node](http://joshondesign.com/2013/10/23/noderpi) for the Pi.
+## NWS with Raspberry Pi (Raspian)
+1. Install [Nodejs](http://joshondesign.com/2013/10/23/noderpi) for the Pi.
 2. Install fswebcam:
-'''bash sudo apt-get install fswebcam'''
+'''
+sudo apt-get install fswebcam
+'''
 3. Set a [static IP](https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address) address for your Pi:
 4. Download the entire NWS project to your Pi.
 5. Update the Node packages from the NWS project root:
-'''bash npm install'''
+'''
+npm install
+'''
 6. Create a startup script:
-'''bash cp nodewebcamserver.sh /etc/init.d'''
+'''
+cp nodewebcamserver.sh /etc/init.d
+'''
 7. Start NWS:
-'''bash service /etc/init.d/nodewebcamserver start'''
+'''
+service /etc/init.d/nodewebcamserver start
+'''
 8. Open a browser on another PC or Laptop to http://<ip>:8080 (replace <ip> with the IP address you assigned in step #3)
 
 ### Webcams with the Raspberry Pi
-It seems most USB webcams are compatible with the Raspberry Pi.  NWS has only been tested with USB
+It seems most USB webcams are compatible with the Raspberry Pi.  NWS has only been tested with a USB
 webcam though it may work with the Raspberry Pi camera port.
 
 ### Optimal Configuration for the Raspberry Pi
 Out of the box, NWS is configured to work with the Pi.  Note that the Pi is slow so take care when
 setting the Capture and FTP intervals below the default settings.  Depending on the camera and
 resolution, capturing an image to a file can take upwards of 5 seconds.
+
+## Security
+Securing NWS is your responsibility.  If you open the web port to the internet, you assume any and all responsibilty 
+for any user that accesses the image.  Also note, NWS does not provide password protection or SSL support.  Its recommended
+you run the web server behind a firewall.  If you wish to allow internet users to view the image, either FTP the image
+to a secure server or use a non-standard web port and set AllowRefreshNow to false.
+
+## License
+There is no license for NWS per se.  Its provided as is, free of charge, can be modified and redistributed at will without
+permission.
