@@ -45,16 +45,16 @@ The command line program to execute that will capture an image from the camera t
 > Arguments (optional)
 * {height}: replaced with ImageHeight,
 * {width}: replaced with ImageWidth,
-* {fileName}: replaced with CaptureToFileName,
+* {fileName}: replaced with CaptureToFilePath,
     
 **CaptureToFilePath**:
 Path to the image file.  This can be anywhere but the user running the web app must have read/write permissions. 
 If a relative path is given, will create the file in the /public folder within this app.
 
-**ImageHeight**
+**ImageHeight**:
 Image height in pixels
 
-**ImageWidth**
+**ImageWidth**:
 Image width in pixels
 
 **CaptureIntervalSeconds**:
