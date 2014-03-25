@@ -54,10 +54,14 @@ To configure NWS, open app.js in your favorite editor and modify the "Webcam Ser
 The command line program to execute that will capture an image from the camera to a file. By default, 
 fswebcam is supported however any commandline program can be used here.  * Just make sure it is referenced in the system path.   
 
-        Arguments (optional):
-        * {height}: replaced with ImageHeight,
-        * {width}: replaced with ImageWidth,
-        * {fileName}: replaced with CaptureToFilePath,
+Arguments (optional):
+        
+        "{height}": replaced with ImageHeight
+
+        "{width}": replaced with ImageWidth
+
+        "{fileName}": replaced with CaptureToFilePath
+
     
 **CaptureToFilePath**:
 Path to the image file.  This can be anywhere but the user running the web app must have read/write permissions. 
@@ -78,18 +82,23 @@ Also see FtpIntervalSeconds notes below if using FTP.
 **CaptureTimeWindowStart** / **CaptureTimeWindowEnd**:
 Time window during a 24 hour period to capture the image. Leave blank for no restrictions.  Format is:
 
-        HH:MM
+        HH:MM: Hours (HH) should be relative to the 24 clock.  
 
-Hours (HH) should be relative to the 24 clock.  For example 5pm is 17:00
+For example 5:30pm is 17:30
 
 Optionally use SUNRISE+/-MM or SUNSET+/-MM to use with respect to local sunrise or sunset.  Latitude and Longitude are required.
 Also ensure your system time is set to the correct timezone for the Lat/Long.
 
-        Examples:
-        * "SUNRISE": Starts/ends right at the calculated SUNRISE time.
-        * "SUNSET": Starts/ends right at the calculated SUNSET time.
-        * "SUNRISE+15": Sunrise + 15 minutes.  Good to ensure there is enough light.
-        * "SUNSET-15": Sunset - 15 minutes.  Good to ensure there is enough light.
+Examples:
+
+        "SUNRISE": Starts/ends right at the calculated SUNRISE time.
+
+        "SUNSET": Starts/ends right at the calculated SUNSET time.
+
+        "SUNRISE+15": Sunrise + 15 minutes.  Good to ensure there is enough light.
+
+        "SUNSET-15": Sunset - 15 minutes.  Good to ensure there is enough light.
+
 
 **Latitude** / **Longitude**:
 Required only if CaptureTimeWindow or FtpTimeWindow use SUNRISE or SUNSET.  This is the decimal representation of the
