@@ -41,6 +41,7 @@
     <Compile Include="routes\image.js" />
     <Compile Include="routes\index.js" />
     <Content Include="config.json" />
+    <Content Include="nws.sh" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="public\webcam.jpg" />
