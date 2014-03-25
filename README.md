@@ -26,23 +26,26 @@ Runs on any platform supported by [Node.js](http://nodejs.org/).
 4. Download the entire NodeWebcamServer directory structure from Github.
 5. Navigate to the root application directory (will have a file named app.js in it) and run:
 
-    npm install
+        npm install
 
 6. Give the directory structure Read/Execute permissions:
 
-    chmod 755 NodeWebcamServer
+        chmod 755 NodeWebcamServer
 
 7. Give the /public directory Read/Write permissions
 
-    chmod 755 NodeWebcamServer/public
+        chmod 755 NodeWebcamServer/public
 
 8. Run the following command from the NWS root directory:
 
-    cd NodeWebcamServer
-    node app.js
+        cd NodeWebcamServer
+        node app.js
 
-9. Open a browser to http://localhost:8080
-10. Configure NWS to start automatically using /etc/init.d or upstart script.  nws.sh is provided as a template for an init.d startup script (configured for the Raspberry Pi).
+9. Open a browser to: 
+
+        http://localhost:8080
+
+10. Configure NWS to start automatically using an /etc/init.d or upstart script.  nws.sh is provided as a template for an init.d startup script (configured for the Raspberry Pi).
 
 ## Configuration
 To configure NWS, open app.js in your favorite editor and modify the "Webcam Server Settings":
@@ -126,21 +129,21 @@ Time window during a 24 hour period to FTP the image. Leave blank to use same re
 1. Install [Node.js](http://joshondesign.com/2013/10/23/noderpi) for the Pi.
 2. Install fswebcam:
       
-    sudo apt-get install fswebcam
+        sudo apt-get install fswebcam
 
 3. Set a [static IP](https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address) address for your Pi:
 4. Download the entire NWS project to your Pi.
 5. Update the Node packages from the NWS project root:
       
-    sudo npm install
+        sudo npm install
 
 6. Create a startup script and give it read/execute permissions:
       
-    sudo cp nws.sh /etc/init.d
-    sudo chmod 755 /etc/init.d/nws.sh
+        sudo cp nws.sh /etc/init.d
+        sudo chmod 755 /etc/init.d/nws.sh
 7. Start NWS:
 
-    sudo service /etc/init.d/nws start
+        sudo service /etc/init.d/nws start
 
 8. Open a browser on another PC or Laptop to http://ip_address:8080 (replace ip_address with the IP address you assigned in step #3)
 
