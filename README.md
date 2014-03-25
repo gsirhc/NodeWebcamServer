@@ -57,9 +57,7 @@ fswebcam is supported however any commandline program can be used here.  * Just 
 Arguments (optional):
         
         "{height}": replaced with ImageHeight
-
         "{width}": replaced with ImageWidth
-
         "{fileName}": replaced with CaptureToFilePath
 
     
@@ -92,11 +90,8 @@ Also ensure your system time is set to the correct timezone for the Lat/Long.
 Examples:
 
         "SUNRISE": Starts/ends right at the calculated SUNRISE time.
-
         "SUNSET": Starts/ends right at the calculated SUNSET time.
-
         "SUNRISE+15": Sunrise + 15 minutes.  Good to ensure there is enough light.
-
         "SUNSET-15": Sunset - 15 minutes.  Good to ensure there is enough light.
 
 
