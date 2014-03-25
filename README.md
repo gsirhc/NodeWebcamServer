@@ -166,6 +166,3 @@ resolution, capturing an image to a file can take upwards of 5 seconds.
 Securing NWS is your responsibility.  If you open the web port to the internet, you assume any and all responsibilty 
 for any user that accesses the image.  Note that NWS does not provide password protection or SSL support.
 
-## License
-There is no license for NWS.  NWS is provided as is, free of charge, can be modified and redistributed at will without
-permission.
