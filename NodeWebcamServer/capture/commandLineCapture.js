@@ -34,7 +34,7 @@ exports.execute = function(settings, action) {
                 var ftpWindowStart = settings.FtpTimeWindowStart == "" ? settings.CaptureTimeWindowStart : settings.FtpTimeWindowStart;
                 var ftpWindowEnd = settings.FtpTimeWindowEnd == "" ? settings.CaptureTimeWindowEnd : settings.FtpTimeWindowEnd;
 
-                if (timeWindow.isInTimeWindow(ftpWindowStart, ftpWindowEnd, settings.Latitutde, settings.Longitutde)) {
+                if (timeWindow.isInTimeWindow(ftpWindowStart, ftpWindowEnd, settings.Latitude, settings.Longitude)) {
                     ftpImage.send(settings);
                 }
             } 

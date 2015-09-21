@@ -143,18 +143,18 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 // Run capture command to grab an image and FTP it at startup, then run at interval
-capture.execute(settings, exports.CAPTURE_FTP); // NOTE: Will not FTP if FtpHost is empty.
+capture.execute(settings, capture.CAPTURE_FTP); // NOTE: Will not FTP if FtpHost is empty.
 
 // Capture the image at an interval.  If FTP is enabled and the capture interval and FTP interval
 // are the same, do them both in a single call.  Otherwise just capture the image.
 if (settings.FtpHost == "" || settings.CaptureIntervalSeconds != settings.FtpIntervalSeconds) {
-    setInterval(function() { capture.execute(settings, exports.CAPTURE) }, settings.CaptureIntervalSeconds * 1000);
+    setInterval(function() { capture.execute(settings, capture.CAPTURE) }, settings.CaptureIntervalSeconds * 1000);
 } else if (settings.CaptureIntervalSeconds == settings.FtpIntervalSeconds) {
-    setInterval(function() { capture.execute(settings, exports.CAPTURE_FTP) }, settings.CaptureIntervalSeconds * 1000);
+    setInterval(function() { capture.execute(settings, capture.CAPTURE_FTP) }, settings.CaptureIntervalSeconds * 1000);
 }
 
 // If FTP is enabled and the FTP interval differs from the capture interval, run FTP separately.
 if (settings.FtpHost != "" && settings.CaptureIntervalSeconds != settings.FtpIntervalSeconds) {
     // FTP the image at FtpIntervalSeconds
-    setInterval(function() { capture.execute(settings, exports.FTP) }, settings.FtpIntervalSeconds * 1000);    
+    setInterval(function() { capture.execute(settings, capture.FTP) }, settings.FtpIntervalSeconds * 1000);    
 }
