@@ -14,16 +14,13 @@ exports.send = function(settings) {
          try {
              var localPath = capture.getImagePath(settings);
              var ftpPath = settings.FtpUploadPath;
-
-             if (!ftpPath.contains(".")) {
-                ftpPath = path.join(ftpPath, capture.getImageFileName(settings));
-             }             
+             ftpPath = path.join(ftpPath, capture.getImageFileName(settings));      
 
              var start = new Date();
 
              c.put(localPath, ftpPath, function(err) {
                 if (err) {
-                    console.error("FTP PUT Error: " + ex);
+                    console.error("FTP PUT Error: " + err);
                 }
                 c.end();
                 
