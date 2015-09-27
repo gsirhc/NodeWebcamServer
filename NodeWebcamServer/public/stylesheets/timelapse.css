@@ -1,0 +1,5 @@
+﻿.timelapse-image {
+  position:absolute;
+  animation:round 16s infinite;
+  opacity:0; 
+}
