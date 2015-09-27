@@ -3,7 +3,7 @@
     "ServerPort":  8080,
     "CaptureCommand": "fswebcam -r {height}x{width} {fileName}",
     "CaptureToFilePath": "webcam.jpg",
-	"ImageHeight": 1024,
+	  "ImageHeight": 1024,
     "ImageWidth": 768,
     "CaptureIntervalSeconds": 60,
     "CaptureTimeWindowStart": "",
@@ -19,5 +19,7 @@
     "FtpUploadPath": "/",
     "FtpIntervalSeconds": 600,
     "FtpTimeWindowStart": "",
-    "FtpTimeWindowEnd": ""
+    "FtpTimeWindowEnd": "",
+    "EnableTimelapse": false,
+    "TimelapseMaxHistoryHours":  48
 }

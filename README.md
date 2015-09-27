@@ -130,6 +130,11 @@ interval is the same as the capture interval, both will be executed at the same 
 **FtpTimeWindowStart** / **FtpTimeWindowEnd**:
 Time window during a 24 hour period to FTP the image. Leave blank to use same resitrction as CaptureTimeWindow.  See CaptureTimeWindow notes for format.
 
+**EnableTimelapse**:
+Set to true to save a history of images and enable the time lapse link.  The time lapse interval is the same as CaptureIntervalSeconds.
+
+**TimelapseMaxHistoryHours**
+The length of time in hours to keep time lapse history.  Older images are deleted.
 
 ## NWS with Raspberry Pi (Raspian)
 1. Install [Node.js](http://joshondesign.com/2013/10/23/noderpi) for the Pi.

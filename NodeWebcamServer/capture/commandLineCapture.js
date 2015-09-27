@@ -3,6 +3,7 @@ var asyncblock = require('asyncblock');
 var exec = require('child_process').exec;
 var path = require('path');
 var ftpImage = require('./ftpImage');
+var timelapse = require('./timelapse');
 var timeWindow = require('./timeWindow');
 var moment = require('moment');
 
@@ -27,6 +28,14 @@ exports.execute = function(settings, action) {
                     exec(command, flow.add());
                     result = flow.wait();
                     console.log("[" + timeStr + "]" + " Captured image file in " + ((new Date()).getTime() - start.getTime()) + " ms. (" + path + ")");
+
+                    if (settings.EnableTimelapse) {
+                        if (settings.TimelapseMaxHistoryHours <= 0) {
+                            console.error("Setting TimelapseMaxHistoryHours must be greater then 0");
+                        } else {
+                            timelapse.captureTimelapse(settings);
+                        }
+                    }
                 }
             }
 

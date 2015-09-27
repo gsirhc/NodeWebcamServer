@@ -36,6 +36,7 @@
     <Compile Include="app.js" />
     <Compile Include="capture\commandLineCapture.js" />
     <Compile Include="capture\ftpImage.js" />
+    <Compile Include="capture\timelapse.js" />
     <Compile Include="capture\timeWindow.js" />
     <Compile Include="routes\refresh.js" />
     <Compile Include="routes\image.js" />

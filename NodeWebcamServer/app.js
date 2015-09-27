@@ -8,6 +8,8 @@
  *
  *    http://localhost:8080/refresh - Forces an immediate capture of the image.  Note, only one user can refresh at a time.
  *
+ *    http://localhost:8080/timelapse - View a time lapse of the image, EnableTimelapse must be set to true
+ * 
  * PLEASE REVIEW THE WEBCAM SERVER SETTINGS BELOW BEFORE RUNNING FOR THE FIRST TIME
  */
 
@@ -94,7 +96,13 @@ var settings = {
 
     /** Time window during a 24 hour period to FTP the image. Leave blank to use same resitrction as CaptureTimeWindow.  See CaptureTimeWindow notes for format. */
     FtpTimeWindowStart: "",
-    FtpTimeWindowEnd: ""
+    FtpTimeWindowEnd: "",
+
+    /** Set to true to save a history of images and enable the time lapse link.  The time lapse interval is the same as CaptureIntervalSeconds. */
+    EnableTimelapse: false,
+    
+    /** The length of time in hours to keep time lapse history.  Older images are deleted. */
+    TimelapseMaxHistoryHours: 48
 };
 /**
  * END Web Server Settings
