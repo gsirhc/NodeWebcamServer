@@ -1,5 +1,8 @@
 ﻿extends layout
 
+block page-head
+   link(rel='stylesheet', href='/stylesheets/timelapse.css')
+
 block content
    each file in imageFiles
       img(src="#{file}").timelapse-image
