@@ -5,15 +5,16 @@ var capture = require('./commandLineCapture');
 
 exports.captureTimelapse = function (settings) {
     try {
-        var path = capture.getImagePath(settings);
-        var directory = path.dirname(path);
+        var imagePath = capture.getImagePath(settings);
+        var directory = path.dirname(imagePath);
         var fullFileName = capture.getImageFileName(settings);
         var extension = path.extname(fullFileName)
         var baseName = path.basename(fullFileName, extension);
+        var timestamp = new Date().getTime().toString();
         
-        var timelapseFileName = path.join(directory, baseName + "_" + new Date().getTime().toString() + extension);
+        var timelapseFileName = path.join(directory, baseName + "_" + timestamp + extension);
         
-        fs.createReadStream(path).pipe(fs.createWriteStream(timelapseFileName));
+        fs.createReadStream(imagePath).pipe(fs.createWriteStream(timelapseFileName));
         console.log("Saved timelapse image " + timelapseFileName);
         
         var result = findRemoveSync(directory, { age: { seconds: settings.TimelapseMaxHistoryHours * 60 * 60 }, extensions: extension });
