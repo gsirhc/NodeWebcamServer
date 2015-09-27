@@ -4,5 +4,6 @@ block page-head
    link(rel='stylesheet', href='/stylesheets/timelapse.css')
 
 block content
-   each file in imageFiles
-      img(src="#{file}").timelapse-image
+   .timelapse-container
+      each file in imageFiles
+         img(src="#{file}").timelapse-image
