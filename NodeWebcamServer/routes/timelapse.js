@@ -19,6 +19,8 @@ exports.get = function (req, res) {
             return timeIndex != -1 && path.dirname(imagePath) == extension;
         });
         
+        console.log("Filter to " + imageFiles.length);
+
         imageFiles = _.sortBy(imageFiles, function (file) {
             var fileName = path.basename(file, extension);
             var timeIndex = fileName.lastIndexOf("_") + 1;
@@ -26,6 +28,8 @@ exports.get = function (req, res) {
             
             return parseInt(timeIndex);
         });
+        
+        console.log("Sorted to " + imageFiles.length);
 
         res.render('timelapse', { title: "Time Lapse - " + settings.Title, settings: settings, imageFiles: imageFiles });
     });
