@@ -13,6 +13,8 @@ exports.get = function (req, res) {
         if (err) {
             throw new Exception(err);
         }
+        
+        console.log("Files " + files.length);
 
         var imageFiles = _.filter(files, function (file) {
             var timeIndex = file.lastIndexOf("_");
