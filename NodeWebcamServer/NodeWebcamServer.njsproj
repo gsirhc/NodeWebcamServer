@@ -41,6 +41,7 @@
     <Compile Include="routes\refresh.js" />
     <Compile Include="routes\image.js" />
     <Compile Include="routes\index.js" />
+    <Compile Include="routes\timelapse.js" />
     <Content Include="config.json" />
     <Content Include="nws.sh" />
     <Content Include="package.json" />
@@ -48,6 +49,7 @@
     <Content Include="public\webcam.jpg" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <Content Include="views\timelapse.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="capture\" />

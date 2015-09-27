@@ -8,11 +8,14 @@ block content
   if settings.AllowRefreshNow     
      | &nbsp;|&nbsp;
      a(href="/refresh") Refresh
+  if settings.EnableTimelapse
+     | &nbsp;|&nbsp;
+     a(href="/timelapse") Time Lapse
   if sunrisesunset.show
      <br/><br/>
      table
         tr
-           td Current:
+           td Current Time:
            td #{sunrisesunset.current}
         tr
            td Sunrise:

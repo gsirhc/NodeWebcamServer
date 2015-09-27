@@ -112,6 +112,7 @@ var express = require('express');
 var routes = require('./routes');
 var image = require('./routes/image');
 var refresh = require('./routes/refresh');
+var timelapse = require('./routes/timelapse.js')
 var http = require('http');
 var path = require('path');
 var capture = require('./capture/commandLineCapture');
@@ -145,6 +146,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/image', image.get);
 app.get('/refresh', refresh.get);
+app.get('/timelapse', timelapse.get)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
