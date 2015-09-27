@@ -3,7 +3,7 @@ var path = require('path');
 var capture = require('../capture/commandLineCapture');
 var _ = require('underscore');
 
-exports.index = function (req, res) {
+exports.get = function (req, res) {
     var settings = res.app.locals["settings"];
     var imagePath = capture.getImagePath(settings);
     var directory = path.dirname(imagePath);
