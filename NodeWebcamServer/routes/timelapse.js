@@ -15,7 +15,7 @@ exports.get = function (req, res) {
         }
 
         var imageFiles = _.filter(files, function (file) {
-            var timeIndex = fileName.lastIndexOf("_");
+            var timeIndex = file.lastIndexOf("_");
             return timeIndex != -1 && path.dirname(imagePath) == extension;
         });
         
