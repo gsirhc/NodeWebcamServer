@@ -17,7 +17,7 @@ exports.captureTimelapse = function (settings) {
         fs.createReadStream(imagePath).pipe(fs.createWriteStream(timelapseFileName));
         console.log("Saved timelapse image " + timelapseFileName);
         
-        var result = findRemoveSync(directory, { age: { seconds: settings.TimelapseMaxHistoryHours * 60 * 60 }, extensions: extension });
+        var result = findremove(directory, { age: { seconds: settings.TimelapseMaxHistoryHours * 60 * 60 }, extensions: extension });
         console.log("Deleted timelapse files: " + result.length)
     } catch (err) {
         console.log("Error capturing time lapse: " + err)
