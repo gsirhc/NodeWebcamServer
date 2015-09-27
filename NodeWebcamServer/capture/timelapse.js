@@ -18,7 +18,7 @@ exports.captureTimelapse = function (settings) {
         console.log("Saved timelapse image " + timelapseFileName);
         
         var result = findremove(directory, { age: { seconds: settings.TimelapseMaxHistoryHours * 60 * 60 }, extensions: extension });
-        console.log("Deleted timelapse files: " + result.length)
+        console.log("Deleted timelapse files: " + result)
     } catch (err) {
         console.log("Error capturing time lapse: " + err)
     }
