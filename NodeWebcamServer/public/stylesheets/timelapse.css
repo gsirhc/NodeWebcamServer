@@ -13,7 +13,7 @@
 
 .timelapse-image {
   position:absolute;
-  animation:round 1000s infinite;
+  animation:round 10000s infinite;
   animation-delay: 5s;
 }
 
