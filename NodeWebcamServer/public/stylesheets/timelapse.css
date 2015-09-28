@@ -13,7 +13,7 @@
 
 .timelapse-image {
   position:absolute;
-  animation:round 100s infinite;
+  animation:round 1000s infinite;
 }
 
 @keyframes round {
