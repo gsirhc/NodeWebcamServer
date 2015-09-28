@@ -1,7 +1,7 @@
 ﻿.timelapse-container {
   margin:50px auto;
-  width:500px;
-  height:300px;
+  width:970px;
+  height:800px;
   overflow:hidden;
   border:10px solid;
   border-top-color:#856036;
@@ -13,6 +13,10 @@
 
 .timelapse-image {
   position:absolute;
-  animation:round 16s infinite;
-  opacity:0; 
+  animation:round 10s infinite;
+}
+
+@keyframes round {
+  0%   { opacity: 1; }
+  100% { opacity: 0.5; }
 }
