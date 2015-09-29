@@ -1,23 +1,18 @@
 ﻿.timelapse-container {
-  margin:50px auto;
-  width:970px;
-  height:800px;
-  overflow:hidden;
-  border:10px solid;
-  border-top-color:#856036;
-  border-left-color:#5d4426;
-  border-bottom-color:#856036;
-  border-right-color:#5d4426;
-  position:relative;
+    display: inline-block;
 }
 
 .timelapse-image {
-  position:absolute;
-  animation:round 10000s infinite;
-  animation-delay: 5s;
+    position:relative;    
+    margin: 10px;
+    padding: 1px;
+    border: solid #000 1px;
+    width: 15%;
 }
 
-@keyframes round {
-  0%   { opacity: 1; }
-  100% { opacity: 0.5; }
+.timelapse-image:hover {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    z-index: 999;
 }

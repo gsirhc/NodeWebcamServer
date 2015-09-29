@@ -6,4 +6,4 @@ block page-head
 block content
    .timelapse-container
       each file in imageFiles
-         img(src="#{file}").timelapse-image
+         img(src="#{file}" width="#{settings.ImageWidth}").timelapse-image
