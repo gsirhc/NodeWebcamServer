@@ -22,9 +22,10 @@ exports.get = function (req, res) {
             return timeIndex != -1 && path.extname(imagePath) == extension;
         });
         
-        if (req.query.half) {   
+        if (req.query.reduce) {   
+            var reduce = parseInt(req.query.reduce);
             imageFiles = _.filter(imageFiles, function (file, index) {
-                return index % 2 == 0;
+                return index % reduce == 0;
             });
         }
 

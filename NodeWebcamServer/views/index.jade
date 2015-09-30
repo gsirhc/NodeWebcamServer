@@ -11,8 +11,16 @@ block content
      | &nbsp;|&nbsp;
      a(href="/refresh") Refresh
   if settings.EnableTimelapse
+     | &nbsp;&nbsp;&nbsp;
+     | Time Lapse:
+     | &nbsp;
+     a(href="/timelapse") Full
      | &nbsp;|&nbsp;
-     a(href="/timelapse") Time Lapse
+     a(href="/timelapse?reduce=2") Reduced Half
+     | &nbsp;|&nbsp;
+     a(href="/timelapse?reduce=3") Reduced Third
+     | &nbsp;|&nbsp;
+     a(href="/timelapse?reduce=4") Reduced Quarter 
   if sunrisesunset.show
      table
         tr
