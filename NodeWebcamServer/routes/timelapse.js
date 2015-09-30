@@ -22,6 +22,12 @@ exports.get = function (req, res) {
             return timeIndex != -1 && path.extname(imagePath) == extension;
         });
         
+        if (req.query.half) {   
+            imageFiles = _.filter(imageFiles, function (file, index) {
+                return index % 2 == 0;
+            });
+        }
+
         console.log("Filter to " + imageFiles.length);
 
         imageFiles = _.sortBy(imageFiles, function (file) {
