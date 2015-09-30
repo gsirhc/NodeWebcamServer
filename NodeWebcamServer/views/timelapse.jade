@@ -5,5 +5,8 @@ block page-head
 
 block content
    .timelapse-container
-      each file in imageFiles
-         img(src="#{file}" width="#{settings.ImageWidth}").timelapse-image
+      .carousel(id="carousel-example-generic", data-ride="carousel", data-interval="100")
+         .carousel-inner(role="listbox")
+            each file, index in imageFiles
+               .item(class=index === 0 ? "active" : "")
+                  img(src="#{file}" width="#{settings.ImageWidth}").timelapse-image.img-responsive
