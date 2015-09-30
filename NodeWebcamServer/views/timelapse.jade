@@ -10,6 +10,6 @@ block content
          .carousel-inner(role="listbox")
             each file, index in imageFiles
                .item(class=index === 0 ? "active" : "")
-                  img(src="#{file}" width="#{settings.ImageWidth}").timelapse-image.img-responsive
+                  img(src="#{file}").timelapse-image.img-responsive
    p
       a(href='/') Back
