@@ -16,7 +16,7 @@ exports.execute = function(settings, action) {
         var timeStr = moment().format("L LT");
         try {                       
             if (action == null || action == exports.CAPTURE || action == exports.CAPTURE_FTP) {
-                if (timeWindow.isInTimeWindow(settings.CaptureTimeWindowStart, settings.CaptureTimeWindowEnd, settings.Latitude, settings.Longitude)) {
+                if (action == null || timeWindow.isInTimeWindow(settings.CaptureTimeWindowStart, settings.CaptureTimeWindowEnd, settings.Latitude, settings.Longitude)) {
                     var path = exports.getImagePath(settings);
                     var command = settings.CaptureCommand;
 
@@ -39,11 +39,11 @@ exports.execute = function(settings, action) {
                 }
             }
 
-            if (action == exports.FTP || action == exports.CAPTURE_FTP) {
+            if (action == null || action == exports.FTP || action == exports.CAPTURE_FTP) {
                 var ftpWindowStart = settings.FtpTimeWindowStart == "" ? settings.CaptureTimeWindowStart : settings.FtpTimeWindowStart;
                 var ftpWindowEnd = settings.FtpTimeWindowEnd == "" ? settings.CaptureTimeWindowEnd : settings.FtpTimeWindowEnd;
 
-                if (timeWindow.isInTimeWindow(ftpWindowStart, ftpWindowEnd, settings.Latitude, settings.Longitude)) {
+                if (action == null || timeWindow.isInTimeWindow(ftpWindowStart, ftpWindowEnd, settings.Latitude, settings.Longitude)) {
                     ftpImage.send(settings);
                 }
             } 
