@@ -68,7 +68,7 @@ var settings = {
     Longitude: "",
     
     /** Title presented on the index page */
-    Title: "Welcome to the WebCam",
+    Title: "Webcam",
 
     /** If true, will allow users capture the latest image from the camera by clicking a refresh link.  
      * Not recommend if open to the internet. */

@@ -4,12 +4,10 @@ block page-head
    link(rel='stylesheet', href='/stylesheets/timelapse.css')
 
 block content
-   h4 Time Lapse
    .timelapse-container
       .carousel(id="carousel-timelapse", data-ride="carousel", data-interval="100")
          .carousel-inner(role="listbox")
-            each file, index in imageFiles
+            each file, index in images
                .item(class=index === 0 ? "active" : "")
-                  img(src="#{file}").timelapse-image.img-responsive
-   p
-      a(href='/') Back
+                  img(src="#{file.filePath}").timelapse-image.img-responsive
+                  span #{file.timeStr}
