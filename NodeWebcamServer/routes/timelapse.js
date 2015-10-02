@@ -1,8 +1,10 @@
 ﻿var fs = require('fs');
 var path = require('path');
-var capture = require('../capture/commandLineCapture');
 var _ = require('underscore');
 var moment = require('moment');
+
+var capture = require('../capture/commandLineCapture');
+var timeWindow = require('../capture/timeWindow');
 
 exports.get = function (req, res) {
     var settings = res.app.locals["settings"];
