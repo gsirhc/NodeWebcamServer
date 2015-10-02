@@ -27,11 +27,11 @@ footer p {
 }
 
 .footer-header {
-    padding-left: 10px;
+    padding-left: 5px;
     font-size: 9pt;
 }
 
 .footer-value {
-    padding-left: 2px;
+    padding-right: 5px;
     font-size: 9pt;
 }

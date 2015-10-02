@@ -63,7 +63,7 @@ exports.getSunriseSunset = function (settings) {
     var ss = { show: false }
 
     try {
-        ss["current"] = moment().format("LTS");
+        ss["current"] = moment().format("LT");
         ss["sunrise"] = moment(exports.timeWindowToDate("SUNRISE", settings.Latitude, settings.Longitude)).format("LT");
         ss["sunset"] = moment(exports.timeWindowToDate("SUNSET", settings.Latitude, settings.Longitude)).format("LT");        
         ss.show = true;

@@ -37,7 +37,7 @@ exports.get = function (req, res) {
 
             return {
                 filePath: file,
-                timeStr: moment(new Date(time)).format('L LTS')
+                timeStr: moment(new Date(time)).format('L LT')
             }
         });
         
