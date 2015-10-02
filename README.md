@@ -168,9 +168,9 @@ setting the Capture and FTP intervals below the default settings.  Depending on 
 resolution, capturing an image to a file can take upwards of 5 seconds.
 
 ## Using the Website
-NWS contains a bundled web server to access NWS from any browser.  By default, the web pages can be accessed from http://your_ip_address:8080.
+By default, the website can be accessed from http://your_ip_address:8080.
 
-The top menu contains the following links:
+The main page will show the last captured image and provides a menu contains the following links:
 
 * **Image Only**: This will load just the image in your browser.  Note, the linked url is useful if you'd like to directly reference the image from another site.
 * **Get Latest**: Will retrieve the latest image from the camera and, if using FTP, will send the image to the FTP server.
@@ -181,8 +181,12 @@ The top menu contains the following links:
    * **Reduce Quarter**: Displays every 4th image of the timelapse.  Useful for really really slow connections or to speed up the timelapse x4
 * **Help**: Links to this README file.
 
+The timelapse page (accessible only in EnableTimelapse is true) will automatically run a timelapse in a continuous loop.
+
 ### Technical Website Details
 The NWS website provides a pretty vinella look at feel however it does use [Bootstrap](http://www.getbootstrap.com) which requires Javascript.  This is to make the site responsive so that it works in any browser or device, big or small.  If you wish to disable Javascript, then simply connect to http://your_ip_address:8080/image and avoid using the built-in site all together.
+
+The timelapse uses the [Bootstrap Carousel](http://getbootstrap.com/javascript/#carousel) with the interval set really low.  Please enter any performance or compatibility issues in the GutHub issues section.
 
 ### Security
 Securing NWS is your responsibility.  If you open the web port to the internet, you assume any and all responsibilty 
