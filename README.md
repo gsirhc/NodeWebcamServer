@@ -167,7 +167,29 @@ Out of the box, NWS is configured to work with the Pi.  Note that the Pi is slow
 setting the Capture and FTP intervals below the default settings.  Depending on the camera and
 resolution, capturing an image to a file can take upwards of 5 seconds.
 
-## Security
+## Using the Website
+NWS comes bundled web server to access NWS from any browser.  By default, the web pages can be accessed from http://your_ip_address:8080.
+
+The top menu contains the following links:
+
+* **Image Only**: This will load just the image in your browser.  Note, the linked url is useful if you'd like to directly reference the image from another site
+* **Get Latest**: Will retrieve the latest image from the camera and, if using FTP, will send the image to the FTP server.
+* **Time Lapse**: Only visible if EnableTimelapse is true.  Provides a dropdown to access the webcam timelapse:
+   * **Full**: Displays the full timelapse depending on your CaptureIntervalSeconds setting.
+   * **Reduce Half**: Displays every other image of the timelapse.  Useful for slow connections or to speed up the timelapse x2
+   * **Reduce Third**: Displays every 3rd image of the timelapse.  Useful for slow connections or to speed up the timelapse x3
+   * **Reduce Quarter**: Displays every 4th image of the timelapse.  Useful for slow connections or to speed up the timelapse x4
+* **Help**: Links to this README file.
+
+### Technical Website Details
+The NWS website provides a pretty vinella look at feel however it does use [Bootstrap](http://www.getbootstrap.com) which requires Javascript.  
+This is to make the site responsive so that it works in any browser or device, big or small.  If you wish to disable Javascript,
+then simply connect to http://your_ip_address:8080/image and avoid using the built-in site all together.
+
+### Security
 Securing NWS is your responsibility.  If you open the web port to the internet, you assume any and all responsibilty 
 for any user that accesses the image.  Note that NWS does not provide password protection or SSL support.
+
+## License
+NWS source code is licensed under the The MIT License (MIT).
 
