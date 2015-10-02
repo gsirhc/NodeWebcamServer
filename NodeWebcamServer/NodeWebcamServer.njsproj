@@ -258,6 +258,7 @@
     <Content Include="public\stylesheets\style.css" />
     <Content Include="public\stylesheets\timelapse.css" />
     <Content Include="public\webcam.jpg" />
+    <Content Include="views\footer.jade" />
     <Content Include="views\header.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />

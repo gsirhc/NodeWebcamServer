@@ -1,3 +1,37 @@
 body {
   padding-top: 60px;
 }
+
+.time-header {
+    font-size: 9pt;
+    color: lightgray;
+}
+
+.time-value {
+    color: lightgray;
+}
+
+footer { 
+    height: 50px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+footer p.text-muted {
+    font-size: 9pt;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-header {
+    padding-left: 10px;
+    font-size: 9pt;
+}
+
+.footer-value {
+    padding-left: 2px;
+    font-size: 9pt;
+}

@@ -41,7 +41,9 @@ exports.get = function (req, res) {
             }
         });
         
-        res.render('timelapse', { title: settings.Title, settings: settings, images: images });
+        var sunrisesunset = timeWindow.getSunriseSunset(settings);
+
+        res.render('timelapse', { title: settings.Title, settings: settings, images: images, sunrisesunset: sunrisesunset });
     });
 };
 

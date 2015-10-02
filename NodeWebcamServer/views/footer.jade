@@ -1,0 +1,14 @@
+﻿footer.footer
+   .container
+      p.text-muted
+         = title
+         if sunrisesunset.show
+            span.footer-header Sunrise:
+            span.footer-value #{sunrisesunset.sunrise}
+            span.text-muted Sunset:
+            span.footer-value #{sunrisesunset.sunset}
+      p.text-muted This website and webcam are the responsibility of the server/webcam owner.
+      p.text-muted 
+         | Source code created and maintained on
+         | 
+         a(greh="https://github.com/gsirhc/NodeWebcamServer") GitHub

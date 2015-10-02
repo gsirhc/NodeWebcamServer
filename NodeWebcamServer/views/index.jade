@@ -1,17 +1,5 @@
 extends layout
 
 block content
-  p
-     img(src='/image').img-responsive
-
-  if sunrisesunset.show
-     table
-        tr
-           td Current Time:
-           td #{sunrisesunset.current}
-        tr
-           td Sunrise:
-           td #{sunrisesunset.sunrise}
-        tr
-           td Sunset:
-           td #{sunrisesunset.sunset}
+   p
+      img(src='/image').img-responsive
