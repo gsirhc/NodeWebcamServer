@@ -170,7 +170,7 @@ resolution, capturing an image to a file can take upwards of 5 seconds.
 ## Using the Website
 By default, the website can be accessed from http://your_ip_address:8080.
 
-The main page will show the last captured image and provides a menu contains the following links:
+The main page will show the last captured image and provides a top menu with the following links:
 
 * **Image Only**: This will load just the image in your browser.  Note, the linked url is useful if you'd like to directly reference the image from another site.
 * **Get Latest**: Will retrieve the latest image from the camera and, if using FTP, will send the image to the FTP server.
