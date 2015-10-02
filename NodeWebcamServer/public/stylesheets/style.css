@@ -32,6 +32,8 @@ footer p {
 }
 
 .footer-value {
+    padding-left: 2px;
     padding-right: 5px;
     font-size: 9pt;
+    color: black;
 }
