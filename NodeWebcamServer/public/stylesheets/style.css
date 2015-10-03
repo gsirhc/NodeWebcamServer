@@ -4,8 +4,9 @@ body {
 
 .page-body {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 70px;
   background-color: white;
+  padding-bottom: 60px;
 }
 
 .time-header {
@@ -18,7 +19,6 @@ body {
 }
 
 footer { 
-
     border-top: solid #aaa 1px;
     text-align: center;
 }
