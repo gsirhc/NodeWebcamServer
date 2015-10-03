@@ -1,6 +1,11 @@
 body {
-  padding-top: 60px;
+  background-color: lightgray;
+}
+
+.page-body {
   text-align: center;
+  padding-top: 60px;
+  background-color: white;
 }
 
 .time-header {
@@ -13,8 +18,8 @@ body {
 }
 
 footer { 
-    height: 50px;
-    border-top: solid lightgray 2px;
+
+    border-top: solid #aaa 1px;
     text-align: center;
 }
 
