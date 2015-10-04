@@ -5,7 +5,7 @@ block page-head
 
 block content
    .timelapse-container
-      .carousel(id="carousel-timelapse", data-ride="carousel", data-interval="1000")
+      .carousel(id="carousel-timelapse", data-ride="carousel", data-interval="100")
          ol(class="carousel-indicators")
             each index in images
                li(data-target="#carousel-timelapse" data-slide-to="#{index}", class="active")
