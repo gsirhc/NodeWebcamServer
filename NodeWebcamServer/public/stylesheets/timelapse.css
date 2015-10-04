@@ -12,7 +12,11 @@
 }
 
 .carousel-indicators {
-  bottom:-70px;
+    bottom: -20px;
+    left: 0;
+    width: 100% !important;
+    margin: 0 auto;
+    height: 0px;
 }
 
 .carousel-indicators li {
