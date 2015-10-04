@@ -7,14 +7,18 @@
     text-align: center;
 }
 
+.carousel {
+    width: 100%
+}
+
+.carousel-indicators {
+  bottom:-70px;
+}
+
 .carousel-indicators li {
     height: 5px;
     width: 5px !important;
     background-color: black !important;
-}
-
-.carousel-indicators {
-  bottom:-50px;
 }
 
 .carousel-indicators active {
