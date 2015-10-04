@@ -6,8 +6,12 @@ block page-head
 block content
    .timelapse-container
       .carousel(id="carousel-timelapse", data-ride="carousel", data-interval="100")
+         ol(class="carousel-indicators")
+            each index in images
+               li(data-target="#carousel-timelapse" data-slide-to="#{index}", class="active")
          .carousel-inner(role="listbox")
             each file, index in images
                .item(class=index === 0 ? "active" : "")
-                  img(src="#{file.filePath}").timelapse-image.img-responsive
-                  span #{file.timeStr}
+                  .timelapse-image
+                     img(src="#{file.filePath}").img-responsive.center-block
+                     span #{file.timeStr}
