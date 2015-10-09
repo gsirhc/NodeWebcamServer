@@ -13,5 +13,5 @@ block content
             each file, index in images
                .item(class=index === 0 ? "active" : "")
                   .timelapse-image
-                     img(src="#{file.filePath}").img-responsive.center-block
+                     img(src="timelapse/#{file.filePath}").img-responsive.center-block
                      span #{file.timeStr}
