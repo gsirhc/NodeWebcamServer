@@ -10,11 +10,12 @@ exports.get = function (req, res) {
     var settings = res.app.locals["settings"];
     var imagePath = capture.getImagePath(settings);
     var directory = path.dirname(imagePath);
-    var extension = path.extname(imagePath)
+    directory = path.join(directory, "timelapse");
+    var extension = path.extname(imagePath);
     
     fs.readdir(directory, function (err, files) {
         if (err) {
-            throw new Exception(err);
+            throw err;
         }
         
         console.log("Files " + files.length);

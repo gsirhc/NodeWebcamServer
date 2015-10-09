@@ -8,18 +8,19 @@ exports.captureTimelapse = function (settings) {
         var imagePath = capture.getImagePath(settings);
         var directory = path.dirname(imagePath);
         var fullFileName = capture.getImageFileName(settings);
-        var extension = path.extname(fullFileName)
+        var extension = path.extname(fullFileName);
         var baseName = path.basename(fullFileName, extension);
         var timestamp = new Date().getTime().toString();
         
-        var timelapseFileName = path.join(directory, baseName + "_" + timestamp + extension);
+        var timelapseFileName = path.join(directory, "timelapse");
+        timelapseFileName = path.join(timelapseFileName, baseName + "_" + timestamp + extension);
         
         fs.createReadStream(imagePath).pipe(fs.createWriteStream(timelapseFileName));
         console.log("Saved timelapse image " + timelapseFileName);
         
         var result = findremove(directory, { age: { seconds: settings.TimelapseMaxHistoryHours * 60 * 60 }, extensions: extension });
-        console.log("Deleted timelapse files: " + result)
+        console.log("Deleted timelapse files: " + result);
     } catch (err) {
-        console.log("Error capturing time lapse: " + err)
+        console.log("Error capturing time lapse: " + err);
     }
 }
