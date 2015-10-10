@@ -12,8 +12,8 @@ exports.captureTimelapse = function (settings) {
         var baseName = path.basename(fullFileName, extension);
         var timestamp = new Date().getTime().toString();
         
-        var timelapseFileName = path.join(directory, "timelapse");
-        timelapseFileName = path.join(timelapseFileName, baseName + "_" + timestamp + extension);
+        directory = path.join(directory, "timelapse")
+        var timelapseFileName = timelapseFileName = path.join(directory, baseName + "_" + timestamp + extension);
         
         fs.createReadStream(imagePath).pipe(fs.createWriteStream(timelapseFileName));
         console.log("Saved timelapse image " + timelapseFileName);
