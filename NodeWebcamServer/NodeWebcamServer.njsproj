@@ -144,6 +144,7 @@
     <Compile Include="capture\ftpImage.js" />
     <Compile Include="capture\timelapse.js" />
     <Compile Include="capture\timeWindow.js" />
+    <Compile Include="public\javascripts\timelapse.js" />
     <Compile Include="routes\refresh.js" />
     <Compile Include="routes\image.js" />
     <Compile Include="routes\index.js" />
