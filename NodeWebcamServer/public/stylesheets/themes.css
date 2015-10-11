@@ -23,3 +23,7 @@ footer.gray {
 footer.dark { 
     border-top: solid #444 1px;
 }
+
+footer.dark .footer-value {
+    color: #CCC;
+}
