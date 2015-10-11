@@ -257,6 +257,7 @@
     <Content Include="nws.sh" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.css" />
+    <Content Include="public\stylesheets\themes.css" />
     <Content Include="public\stylesheets\timelapse.css" />
     <Content Include="public\webcam.jpg" />
     <Content Include="views\footer.jade" />

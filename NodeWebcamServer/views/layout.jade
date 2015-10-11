@@ -6,10 +6,11 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/themes.css')
     block page-head
-  body
+  body(class= settings.Theme)
      
-     .page-body
+     .page-body(class= settings.Theme)
         include header
         .container
            block content

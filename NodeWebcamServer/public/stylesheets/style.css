@@ -17,11 +17,6 @@ body {
     color: lightgray;
 }
 
-footer { 
-    border-top: solid #aaa 1px;
-    text-align: center;
-}
-
 footer p.text-muted {
     font-size: 9pt;
 }

@@ -1,4 +1,4 @@
-﻿footer.footer
+﻿footer.footer(class= settings.Theme)
    .container
       p.text-muted
          = title
@@ -8,6 +8,11 @@
             span.text-muted Sunset:
             span.footer-value #{sunrisesunset.sunset}
       p.text-muted 
+         | Theme:
+         | 
+         =settings.Theme
+         | 
+         | 
          | Source code available on
          | 
          a(href="https://github.com/gsirhc/NodeWebcamServer") GitHub

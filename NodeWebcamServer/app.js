@@ -19,6 +19,13 @@
 var settings = {
     /** The port which the Webcam server will run on. */
     ServerPort: 8080,
+    
+    /** Web site theme:
+     *   "default": The default scheme
+     *   "dark": All black 
+     *   "gray": Subtle all gray
+     */
+    Theme: "default",
 
     /** The command line program to execute that will capture an image from the camera to a file.  
      * By default, fswebcam is supported however any commandline program can be used here.  

@@ -1,0 +1,25 @@
+﻿.dark {
+    background-color: #222;   
+}
+
+body.gray {
+    background-color: #eee;   
+}
+
+
+footer {
+    text-align: center;
+}
+
+footer.default { 
+    border-top: solid #aaa 1px;
+}
+
+footer.gray { 
+    border-top: solid #ddd 1px;
+    background-color: #eee;
+}
+
+footer.dark { 
+    border-top: solid #444 1px;
+}
